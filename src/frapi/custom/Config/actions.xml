@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frapi-config>
+ <actions>
+  <action>
+   <name>User</name>
+   <enabled>1</enabled>
+   <public>1</public>
+   <description>GET: Retrieve the data of a user&#13;
+POST: Create or edit a user&#13;
+&#13;
+In both cases a username needs to be provided.</description>
+   <route>/user</route>
+   <hash>892cec4325d5adc7f706cb8009c12803f3e04c7d</hash>
+   <parameters>
+    <parameter>
+     <name>username</name>
+     <required>1</required>
+    </parameter>
+   </parameters>
+  </action>
+  <action>
+   <name>Message</name>
+   <enabled>1</enabled>
+   <public>1</public>
+   <description>GET: Get a list of messages (optional parameter 'username' to retrieve the messages of 1 user)&#13;
+POST: Send a new message (required parameter 'message')</description>
+   <route>/message</route>
+   <hash>098101b16082abacd7eab1bcd8953388a7d8b7c2</hash>
+   <parameters>
+    <parameter>
+     <name>username</name>
+     <required>0</required>
+    </parameter>
+    <parameter>
+     <name>message</name>
+     <required>0</required>
+    </parameter>
+   </parameters>
+  </action>
+  <action>
+   <name>Auth</name>
+   <enabled>1</enabled>
+   <public>1</public>
+   <description>Authenticate to the server and get an authkey on success</description>
+   <route>/auth</route>
+   <parameters></parameters>
+   <hash>82e8273c496eb4d26e1a304284df709093ef5c89</hash>
+  </action>
+ </actions>
+</frapi-config>
